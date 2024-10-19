@@ -9,8 +9,13 @@ WORKDIR /app
 # COPY package*.json ./
 
 # Step 5: Copy the rest of the application code into the container
-COPY . .
-# COPY ./index.html /usr/share/nginx/html/index.html
+# COPY . .
+COPY ./index.html /usr/share/nginx/html/index.html
+COPY ./build /usr/share/nginx/html/build
+COPY ./libs /usr/share/nginx/html/libs
+COPY ./pointclouds /usr/share/nginx/html/pointclouds
+COPY ./resources /usr/share/nginx/html/resources
+COPY ./examples /usr/share/nginx/html/examples
 
 # Step 4: Install dependencies
 # RUN npm install
