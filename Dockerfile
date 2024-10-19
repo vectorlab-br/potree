@@ -16,6 +16,7 @@ COPY ./libs /usr/share/nginx/html/libs
 COPY ./pointclouds /usr/share/nginx/html/pointclouds
 COPY ./resources /usr/share/nginx/html/resources
 COPY ./examples /usr/share/nginx/html/examples
+COPY ./pts /usr/share/nginx/html/pts
 
 # Step 4: Install dependencies
 # RUN npm install
