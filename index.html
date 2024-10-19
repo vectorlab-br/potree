@@ -2,12 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=http://examples/page.html">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+  <script type="text/javascript">
+    // Check the current hostname (localhost or production server)
+    let host = window.location.hostname;
+
+    // Set the page path for both local and production environments
+    let targetPage;
+    if (host === "localhost") {
+        targetPage = "http://localhost:7100/examples/page.html"; // Local URL
+    } else {
+        targetPage = "http://181.215.135.41:7100/examples/page.html"; // Production URL
+    }
+
+    // Redirect to the correct page
+    window.location.href = targetPage;
+</script>
+
 </head>
 <body>
   <h1>Main Body!!!</h1>
-  <p>If you are not redirected automatically, <a href="http://examples/page.html">click here</a>.</p>
+  <!-- <p>If you are not redirected automatically, <a href="http://examples/page.html">click here</a>.</p> -->
 </body>
 </html>

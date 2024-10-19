@@ -1,0 +1,18 @@
+version: "3.8"  # Specify the version of Docker Compose
+
+services:
+  node-app:
+    image: vectorlab/v3dviz:latest  # Use the Node.js 18 base image
+    container_name: node_app_container  # Name the container
+    working_dir: /app  # Set the working directory inside the container
+    ports:
+      - "7100:7100"  # Map port 7100 on the host to port 7100 in the container
+    volumes:
+      - ./:/app  # Mount the current directory to /app inside the container
+    command: ["npm", "start"]  # Define the command to start the app
+    # environment:
+      # NODE_ENV: development  # Set environment variables (optional)
+
+    # Optional: You can add `depends_on` to ensure the service starts after other services (if applicable).
+    # depends_on:
+    #   - some-other-service
