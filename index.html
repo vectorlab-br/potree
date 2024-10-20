@@ -1,30 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards with Links</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-  <script type="text/javascript">
-    // Check the current hostname (localhost or production server)
-    let host = window.location.hostname;
+        .banner {
+            background-color: #333;
+            padding: 20px;
+            text-align: left;
+        }
 
-    // Set the page path for both local and production environments
-    let targetPage;
-    if (host === "localhost") {
-        targetPage = "http://localhost:7100/examples/page.html"; // Local URL
-    } else {
-        // targetPage = "http://181.215.135.41:7100/pts/t1.html"; // Production URL
-        // targetPage = "http://viz.vectorlab.com.br:7100/pts/t1.html"; // Production URL
-    }
+        .banner img {
+            max-width: 220px;
+            height: auto;
+        }        
 
-    // Redirect to the correct page
-    // window.location.href = targetPage;
-</script>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
 
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+
+        .card-description {
+            font-size: 1em;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .card img {
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>This is SPARTA #5.1!!!</h1>
-  <!-- <p>If you are not redirected automatically, <a href="http://examples/page.html">click here</a>.</p> -->
+    <!-- Banner section -->
+    <div class="banner">
+        <img src="./pts/images/vector3d-logo.png" alt="Company Logo">
+    </div>
+
+    <div class="container">
+        <a href="./pts/t1.html" class="card">
+            <img src="./pts/images/t1.jpg" alt="Card 1 Image">
+            <div class="card-content">
+                <h2 class="card-title">Teste #1</h2>
+                <p class="card-description">Primeira nuvem de testes</p>
+            </div>
+        </a>
+
+        <a href="./pts/t2.html" class="card">
+            <img src="./pts/images/t2.jpg" alt="Card 2 Image">
+            <div class="card-content">
+                <h2 class="card-title">Prime</h2>
+                <p class="card-description">Nuvem Prime</p>
+            </div>
+        </a>
+
+        <a href="./pts/t1+t2.html" class="card">
+            <img src="./pts/images/t1+t2.jpg" alt="Card 3 Image">
+            <div class="card-content">
+                <h2 class="card-title">Teste #1 + Prime</h2>
+                <p class="card-description">Sobreposição de ambas as nuvens</p>
+            </div>
+        </a>
+
+        <!-- Add more cards with links to other HTML files as needed -->
+    </div>
 </body>
 </html>
