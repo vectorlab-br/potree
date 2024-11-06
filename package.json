@@ -2,6 +2,7 @@
   "name": "potree",
   "private": true,
   "version": "1.8.0",
+  "type": "commonjs",
   "description": "WebGL point cloud viewer",
   "keywords": [
     "point",
