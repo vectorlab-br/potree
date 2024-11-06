@@ -65,7 +65,8 @@ export class Sidebar{
 		// ANGLE
 		let elToolbar = $('#tools');
 		elToolbar.append(this.createToolIcon(
-			Potree.resourcePath + '/icons/angle.png',
+			/// Changed to svg
+			Potree.resourcePath + '/icons/angle.svg',
 			'[title]tt.angle_measurement',
 			() => {
 				$('#menu_measurements').next().slideDown();
@@ -1372,7 +1373,8 @@ export class Sidebar{
 		let lblMoveSpeed = $('#lblMoveSpeed');
 
 		elNavigation.append(this.createToolIcon(
-			Potree.resourcePath + '/icons/earth_controls_1.png',
+			/// Changed to svg
+			Potree.resourcePath + '/icons/earth_controls_1.svg',
 			'[title]tt.earth_control',
 			() => { this.viewer.setControls(this.viewer.earthControls); }
 		));
