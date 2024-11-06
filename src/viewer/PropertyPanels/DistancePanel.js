@@ -75,7 +75,7 @@ export class DistancePanel extends MeasurePanel{
 			let elDistance = $(`
 				<tr>
 					<th>${label}</th>
-					<td style="width: 100%; padding-left: 10px">${distance}</td>
+					<td style="width: 100%; padding-left: 10px">${distance} (${distance * 1000}mm)</td>
 				</tr>`);
 			elDistanceTable.append(elDistance);
 		}
