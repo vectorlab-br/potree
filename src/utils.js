@@ -367,7 +367,8 @@ export class Utils {
 		let size = width * height;
 		let data = new Uint8Array(3 * size);
 
-		let chroma = [1, 1.5, 1.7];
+		/// Control background color for gradient
+		let chroma = [1, 1.15, 2.7];
 		let max = gauss(0, 0);
 
 		for (let x = 0; x < width; x++) {
